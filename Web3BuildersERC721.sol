@@ -9,7 +9,7 @@ import "@openzeppelin/contracts/utils/Counters.sol";
 
 contract Web3Builders is ERC721, ERC721Enumerable, Pausable, Ownable {
     using Counters for Counters.Counter;
-    uint256 maxSupply = 2000;
+    uint256 maxSupply = 5;
 
     bool public publicMintOpen = false;
     bool public allowListMintOpen = false;
@@ -18,10 +18,10 @@ contract Web3Builders is ERC721, ERC721Enumerable, Pausable, Ownable {
 
     Counters.Counter private _tokenIdCounter;
 
-    constructor() ERC721("Web3Builders", "WE3") {}
+    constructor() ERC721("MyFirstNFT", "MFN") {}
 
     function _baseURI() internal pure override returns (string memory) {
-        return "ipfs://Qmaa6TuP2s9pSKczHF4rwWhTKUdygrrDs8RmYYqCjP3Hye/";
+        return "ipfs://QmR6Hubs5AWv4Sn3Wa4gCd4vcCCmH9vCf8eUMQmaK3Avrp/";
     }
 
     function pause() public onlyOwner {
